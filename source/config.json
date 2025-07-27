@@ -1,0 +1,25 @@
+{
+    "themes": {
+        "selected": "dark",
+        "types": {
+            "light": {
+                "background": "#ffffff",
+                "text": "#000000",
+                "save_buttons": "#d5ffa8",
+                "other_buttons": "#ffc7a8"
+            },
+            "dark": {
+                "background": "#1c1c1c",
+                "text": "#ffffff",
+                "save_buttons": "#0e2905",
+                "other_buttons": "#291a05"
+            }
+        }
+    },
+    "string": {
+        "begin_line": "You can edit this line with Settings!"
+    },
+    "boolean": {
+        "fasttrack": false
+    }
+}
