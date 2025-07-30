@@ -1,0 +1,55 @@
+{
+    "themes": {
+        "selected": "Dark",
+        "types": {
+            "Light": {
+                "background": "#ffffff",
+                "text": "#000000",
+                "save_buttons": "#d5ffa8",
+                "other_buttons": "#ffc7a8"
+            },
+            "Dark": {
+                "background": "#1c1c1c",
+                "text": "#ffffff",
+                "save_buttons": "#0e2905",
+                "other_buttons": "#291a05"
+            },
+            "Pure Light": {
+                "background": "#ffffff",
+                "text": "#000000",
+                "save_buttons": "#ffffff",
+                "other_buttons": "#ffffff"
+            },
+            "Pure Dark": {
+                "background": "#000000",
+                "text": "#ffffff",
+                "save_buttons": "#000000",
+                "other_buttons": "#000000"
+            },
+            "T3XT 3D1T": {
+                "background": "#000000",
+                "text": "#00F900",
+                "save_buttons": "#000000",
+                "other_buttons": "#000000"
+            },
+            "OpenTE[or]": {
+                "background": "#001DAC",
+                "text": "#ffffff",
+                "save_buttons": "#000000",
+                "other_buttons": "#001DAC"
+            },
+            "Nightlight Mode": {
+                "background": "#c4c397",
+                "text": "#1c1c1b",
+                "save_buttons": "#b0e6a5",
+                "other_buttons": "#e8a66f"
+            }
+        }
+    },
+    "string": {
+        "begin_line": "You're using personal_config.json!"
+    },
+    "boolean": {
+        "fasttrack": true
+    }
+}
