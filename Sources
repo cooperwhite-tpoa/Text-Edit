@@ -1,0 +1,8 @@
+Sources:
+lambda Function calls for the buttons: the stupid AI Search thing that Google has for it's Googling thing came up when I searched something like "why does my function start when called by button?", so instead of crediting Google Gemini, because it's a bastard, I'm attributing the millions of people that contributed to its training non-consentually.
+Entry widget: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/ttk-Entry.html
+Combobox: https://www.geeksforgeeks.org/python/dropdown-menus-tkinter/
+Dictionary/JSON theme names: https://www.geeksforgeeks.org/python/python-dictionary-keys-method/
+
+gen_config.py specific:
+https://coderslegacy.com/tkinter-center-window-on-screen/ - Center Entry widget.

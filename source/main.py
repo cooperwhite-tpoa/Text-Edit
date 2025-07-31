@@ -82,11 +82,26 @@ class Main:
                             ['selected']
                            )
             # Load chosen theme.
-            colours = (settings
-                       ['themes']
-                       ['types']
-                       [theme_chosen]
-                      )
+            try:
+                colours = (settings
+                           ['themes']
+                           ['types']
+                          [theme_chosen]
+                          )
+            except KeyError:
+                info_fallback_theme = ("An invalid theme was chosen or your"
+                                       " chosen theme doesn't exist anymore."
+                                       " Light mode will be used until a"
+                                       " valid theme is chosen in settings."
+                                      )
+                showinfo(title="Invalid theme chosen.",
+                         message=info_fallback_theme
+                        )
+                colours = (settings
+                           ['themes']
+                           ['types']
+                           ['Light']
+                          )
 
         def load_theme(self):
             """
@@ -493,3 +508,4 @@ if __name__ == "__main__":
     root.wm_protocol("WM_DELETE_WINDOW", act.confirm_close)
     # Start the main loop of Tkinter.
     root.mainloop()
+

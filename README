@@ -1,0 +1,89 @@
+Hello! Welcome to Text Edit, a Python/Tk based text editor.
+
+Features
+	- Can save and open files
+	- Themes
+	- Fasttrack, a way to speed up production for advanced use.
+	- Cool looking
+	- This readme was written in Text Edit
+	- Mostly PEP-8 compliant
+
+Pre-requisites
+	- main.py
+	- Python 3.1* or later
+	- config.json (can be generated though)
+	- Graphical enviornment (Like Windows or XFCE)
+
+*How do I use Text Edit?*
+----------
+**RUNNING WITH PROVIDED LAUNCHERS (RECOMMENDED)**
+I would recommend using the provided .bat (Windows) or .sh (Unix) file provided inside of the GitHub repository. Simply run it and you get expected functionality.
+**RUNNING FROM TERMINAL**
+If you want to launch Text Edit yourself, use the two commands that should work on both CMD/Powershell and Bash-likes.
+CMD: "python.exe main.py"
+BASH: "python main.py"
+**DO NOT RUN DIRECTLY**
+When I tested this out on my machine (Windows 10), the program complained it could not find config.json and still didn't create it after the dialogue. If you encounter errors running directly, please try above options!
+
+*How is Text Edit structured?*
+----------
+(Basic code structure up ahead)
+Imports
+Load config.json
+Class Main/Action:
+	Init:
+	Load the settings and variables
+	
+	Load_Settings:
+	Load fasttrack, begin_line, and colours/theme
+
+	Load_Theme:
+	Create Style, configure widgets to use style.
+
+	Write_Settings(category, name, value):
+	Get category, name, and value when called, dump it to config.json.
+
+	OnButtonPress(type):
+	> Get type of button
+	> If fasttrack: confirm if you want to enable, if already enabled, turn it off.
+	> If beginline: write line given.
+	> If settheme: Get theme chosen from drop down, then say it'll take effect after a restart.
+	Load settings that can be loaded.
+
+	Settings_Window:
+	Disables the settings button, makes a new window with all of the widgets, which, when pressed, activate certain commands.
+
+	Open_File:
+	> If fasttrack, skip the dialouge.
+	Ask if you want to open a file (overwrites textbox), then brings up a file explorer window, which allows the user to open a file. Open the file, write it to the textbox, continue program.
+
+	Clear_Textbox(skipquestion)
+	> If fasttrack or skipquestion is True, skip the dialouge.
+	Ask the user if they really want to clear all, if true, clear everything in the textbox.
+
+	savetofile(filepath, skipquestion):
+	> If fasttrack or skipquestion is True, skip the dialouge.
+	Ask if you want to overwrite the file, then overwrite everything in it.
+
+	savefileas:
+	Opens up a file explorer window, then saves contents to chosen file.
+
+	confirm_close:
+	> If fasttrack is True, skip the dialouge.
+	Ask if you want to close the program upon Alt+F4 or pressing the x button, if True, close the program.
+	
+	update_filepath(new_filepath):
+	Updates the buttons and titlebar of the program with the filenames.
+
+Non-Main class:
+Make a variable to call Main.Actions() (act),
+Creates and configures the root window,
+Makes the widgets (and configures them),
+Sets up scrollbar and textbox, the thing I'm typing in right now,
+Adds everything to the grid/Frame,
+Loads theme,
+Allow Textbox to expand, which allows you to have a lot more text and the scrollbar to work.
+
+IF CALLED AS A PROGRAM:
+Set up the exit behaviour
+and starts the mainloop.
